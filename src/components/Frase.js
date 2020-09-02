@@ -7,6 +7,8 @@ const ContenedorFrase = styled.div `
     background-color: #FFF;
     max-width: 800px;
     margin-top: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 
     @media (min-width: 992px){
         margin-top: 10rem;
@@ -17,11 +19,12 @@ const ContenedorFrase = styled.div `
         text-align: center;
         position:relative;
         padding-left: 4rem;
+        color: #287a2b;
 
         &::before {
             content: open-quote;
             font-size: 10rem;
-            color: black;
+            color: #287a2b;
             position: absolute;
             left: -1rem;
             top: -2rem;

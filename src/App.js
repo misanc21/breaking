@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from '@emotion/styled'
 
 import Frase from './components/Frase'
@@ -8,10 +8,17 @@ const Boton = styled.button`
   background-size: 300px;
   font-family: Arial, Helvetica, sans-serif;
   color: #FFF;
-  margin-top: 3rem;
+  margin: 3rem;
   padding: 1rem 3rem;
   font-size: 2rem;
-  border: 2px solid black;
+  border: 3px solid #073309;
+  border-radius: 8px;
+  transition: background-size .8s ease;
+
+  :hover {
+    cursor:pointer;
+    background-size: 400px; 
+  }
 `
 
 const Contenedor = styled.div`
@@ -22,6 +29,11 @@ const Contenedor = styled.div`
 `
 
 function App() {
+
+  useEffect(()=>{
+    consultarApi();
+  }, [])
+
   const [frase, setFrase] = useState({})
 
   const consultarApi = async () =>{
