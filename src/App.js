@@ -30,10 +30,6 @@ const Contenedor = styled.div`
   flex-direction: column;
 `
 
-const Imagen = styled.img`
-  margin:0;
-`
-
 function App() {
 
   useEffect(() => {
@@ -51,7 +47,7 @@ function App() {
   return (
     <Contenedor>
       <header>
-        <Imagen src={logo} alt="logo"/>
+        <img src={logo} alt="logo"/>
       </header>
       <Frase
         frase={frase}
