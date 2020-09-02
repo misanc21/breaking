@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import styled from '@emotion/styled'
+
+import logo from './logo.svg'
 
 import Frase from './components/Frase'
 
@@ -28,24 +30,31 @@ const Contenedor = styled.div`
   flex-direction: column;
 `
 
+const Imagen = styled.img`
+  margin:0;
+`
+
 function App() {
 
-  useEffect(()=>{
+  useEffect(() => {
     consultarApi();
   }, [])
 
   const [frase, setFrase] = useState({})
 
-  const consultarApi = async () =>{
+  const consultarApi = async () => {
     const api = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes')
     const de = await api.json()
     setFrase(de[0])
-    
+
   }
   return (
     <Contenedor>
+      <header>
+        <Imagen src={logo} alt="logo"/>
+      </header>
       <Frase
-        frase = {frase}
+        frase={frase}
       />
       <Boton
         onClick={consultarApi}

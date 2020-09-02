@@ -6,13 +6,10 @@ const ContenedorFrase = styled.div `
     border-radius: .5rem;
     background-color: #FFF;
     max-width: 800px;
-    margin-top: 10rem;
+    margin-top: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
 
-    @media (min-width: 992px){
-        margin-top: 10rem;
-    }
 
     h1 {
         font-family: Arial, Helvetica, sans-serif;
