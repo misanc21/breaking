@@ -1,4 +1,4 @@
-# Frases de Breakin bad
+# Frases de Breaking bad
 _Proyecto para buscar frases de BB por medio de API_ 
 
 ## Comenzando 🚀
